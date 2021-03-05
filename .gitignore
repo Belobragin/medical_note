@@ -1,0 +1,7 @@
+**/*.ipynb
+**/ipynb*
+**/__pycache__
+**/temp
+
+#not ready yet:
+**/ahtask_Belobragin*
