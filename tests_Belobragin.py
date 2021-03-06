@@ -64,15 +64,25 @@ class TableCreationTest(unittest.TestCase):
         #test correct number of elements:
         result = OurSweatFoo(start_node = 'ABCD')
         self.assertTrue(len(result) == 5)
+        [self.assertTrue(res.level1 == 'A') for res in result]
+        [self.assertTrue(res.level2 == 'B') for res in result]
+        [self.assertTrue(res.level3 == 'C') for res in result]
+        [self.assertTrue(res.level4 == 'D') for res in result]
         #two levels elements:
         result = OurSweatFoo(start_node = 'ABC')
         self.assertTrue(len(result) == 25)
+        [self.assertTrue(res.level1 == 'A') for res in result]
+        [self.assertTrue(res.level2 == 'B') for res in result]
+        [self.assertTrue(res.level3 == 'C') for res in result]
         #three levels elements:
         result = OurSweatFoo(start_node = 'AB')
         self.assertTrue(len(result) == 125)
+        [self.assertTrue(res.level1 == 'A') for res in result]
+        [self.assertTrue(res.level2 == 'B') for res in result]
         #four levels elements:
         result = OurSweatFoo(start_node = 'A')
         self.assertTrue(len(result) == 625)
+        [self.assertTrue(res.level1 == 'A') for res in result]
          #five levels elements:
         result = OurSweatFoo()
         self.assertTrue(len(result) == 3125)
@@ -86,7 +96,5 @@ class TableCreationTest(unittest.TestCase):
         res_desc = [res.title for res in result] #descendency order - must be reverse to previous
         self.assertTrue(list(reversed(res_desc)) == res_asc)
         
-
-
 
 

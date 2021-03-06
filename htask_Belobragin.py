@@ -135,10 +135,10 @@ if __name__ == '__main__':
     populate_tables()
 
     #make selection and sorting:
-    temp = OurSweatFoo(start_node = 'ABCD',
+    temp = OurSweatFoo(start_node = 'AB',
                        sort_dir = DESC, 
                     )    
-    #enjoy result:
+    #enjoy result - COMMENT 142 to avoid stdout:
     print([res.title for res in temp])
     
 
